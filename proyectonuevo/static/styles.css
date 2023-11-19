@@ -1,0 +1,39 @@
+/*haré un estilo propio ya que no se especifica que se copiara el estilo de la evaluación*/
+
+body {
+    font-family: 'Times New Roman', serif; /*me gusta times new roman*/
+    margin: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/*estilo para titulos*/
+h1 {
+    color: #black;
+    background-color: #4caf50; /*color verde*/
+    padding: 10px;
+    border-radius: 10px;
+    display: block; /* Cambiado a 'block' para ocupar el ancho completo */
+    margin-top: 0; /* Elimina el margen superior predeterminado del h1 */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: #black;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px; /* Añadido para redondear las esquinas */
+    font-weight: bold; /* Agregado para el botón */
+    color: #000;
+}

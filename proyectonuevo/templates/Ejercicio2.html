@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <h1>Formulario de Nombres</h1>
+    <form action="/comparar_nombres" method="post">
+        <label for="nombre1">Nombre 1:</label>
+        <input type="text" name="nombre1" required> <!--requerimientos como nombre y text-->
+
+        <label for="nombre2">Nombre 2:</label>
+        <input type="text" name="nombre2" required>
+
+        <label for="nombre3">Nombre 3:</label>
+        <input type="text" name="nombre3" required>
+
+        <button type="submit">Enviar</button>
+    </form>
+    {% if resultado %} <!--para mostrar resultados en pantalla-->
+        <p>{{ resultado }}</p>
+    {% endif %}
+</body>
+</html>

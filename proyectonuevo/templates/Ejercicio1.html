@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Ejercicio 1</title> <!--titulo de la pagina en el explorador-->
+</head>
+<body>
+    <h1>Formulario de Notas</h1> <!--titulo-->
+    <form action="/calcular_promedio" method="post">
+        <label for="nota1">Nota 1:</label>
+        <input type="number" name="nota1" min="10" max="70" required> <!--requerimientos como min max y number-->
+
+        <label for="nota2">Nota 2:</label>
+        <input type="number" name="nota2" min="10" max="70" required>
+
+        <label for="nota3">Nota 3:</label>
+        <input type="number" name="nota3" min="10" max="70" required>
+
+        <label for="asistencia">Asistencia (%):</label>
+        <input type="number" name="asistencia" min="0" max="100" required>
+
+        <button type="submit">Enviar</button>
+    </form>
+    {% if resultado %} <!--para mostrar los resultados en la misma pantalla-->
+        <p>{{ resultado }}</p>
+    {% endif %}
+</body>
+</html>
